@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Return Management System - Submit Return</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="submit-page">
+    <header class="floating-header">UGANDA PRISONS SERVICE</header>
+    <div class="container">
+        <h1>Submit Return</h1>
+        <form id="submitReturnForm">
+            <label for="frequency">Frequency:</label>
+            <select id="frequency" required>
+                <option value="">Select Frequency</option>
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="annual">Annual</option>
+            </select>
+            
+            <label for="returnType">Return Type:</label>
+            <select id="returnType" required>
+                <option value="">Select Return Type</option>
+                <!-- Options will be populated by JavaScript based on frequency -->
+            </select>
+            
+            <label for="station">Station:</label>
+            <select id="station" required>
+                <option value="">Select Station</option>
+                <optgroup label="PRISON UNITS">
+                    <option value="MaxPri Upper">MaxPri Upper</option>
+                    <option value="M-Bay Pri">M-Bay Pri</option>
+                    <option value="Luzira (W)">Luzira (W)</option>
+                    <option value="Kigo (M)">Kigo (M)</option>
+                    <option value="Kigo (W)">Kigo (W)</option>
+                    <option value="Masaka (M)">Masaka (M)</option>
+                    <option value="Masaka (W)">Masaka (W)</option>
+                    <option value="Mbale (M)">Mbale (M)</option>
+                    <option value="Mbale (W)">Mbale (W)</option>
+                    <option value="Lira (M)">Lira (M)</option>
+                    <option value="Lira (W)">Lira (W)</option>
+                    <option value="Arua (M)">Arua (M)</option>
+                    <option value="Arua (W)">Arua (W)</option>
+                    <option value="Mbarara (M)">Mbarara (M)</option>
+                    <option value="Mbarara (W)">Mbarara (W)</option>
+                    <option value="Gulu (M)">Gulu (M)</option>
+                    <option value="Gulu (W)">Gulu (W)</option>
+                    <option value="Nakasongola (M)">Nakasongola (M)</option>
+                    <option value="Nakasongola (W)">Nakasongola (W)</option>
+                    <option value="Tororo (W)">Tororo (W)</option>
+                    <option value="Jinja (R)">Jinja (R)</option>
+                    <option value="Fort Portal (M)">Fort Portal (M)</option>
+                    <option value="Fort Portal (W)">Fort Portal (W)</option>
+                    <option value="Masindi (M)">Masindi (M)</option>
+                    <option value="Masindi (W)">Masindi (W)</option>
+                    <option value="Bushenyi (M)">Bushenyi (M)</option>
+                    <option value="Bushenyi (W)">Bushenyi (W)</option>
+                    <option value="IBANDA ZONE">IBANDA ZONE</option>
+                    <option value="Luweero">Luweero</option>
+                    <option value="Kanoni">Kanoni</option>
+                    <option value="Wakiso">Wakiso</option>
+                    <option value="Mpigi">Mpigi</option>
+                    <option value="Buikwe">Buikwe</option>
+                    <option value="Lugazi">Lugazi</option>
+                    <option value="Koome">Koome</option>
+                    <option value="Buvuma">Buvuma</option>
+                    <option value="Kauga">Kauga</option>
+                    <option value="Nyenga">Nyenga</option>
+                    <option value="Kagadi">Kagadi</option>
+                    <option value="Mityana">Mityana</option>
+                    <option value="Magala">Magala</option>
+                    <option value="Myanzi">Myanzi</option>
+                    <option value="Mwera">Mwera</option>
+                    <option value="Kassanda">Kassanda</option>
+                    <option value="Kibaale">Kibaale</option>
+                    <option value="Kyakasengura">Kyakasengura</option>
+                    <option value="Muinaina">Muinaina</option>
+                    <option value="Kitwe">Kitwe</option>
+                    <option value="Lugore">Lugore</option>
+                    <option value="Orom-Tikau">Orom-Tikau</option>
+                    <option value="Lamwo">Lamwo</option>
+                    <option value="Patongo">Patongo</option>
+                    <option value="Lotuturu">Lotuturu</option>
+                    <option value="Pader">Pader</option>
+                    <option value="Pece">Pece</option>
+                    <option value="Kaladima">Kaladima</option>
+                    <option value="Kitgum">Kitgum</option>
+                    <option value="Otuke Remand">Otuke Remand</option>
+                    <option value="Apac">Apac</option>
+                    <option value="Maruzi">Maruzi</option>
+                    <option value="Kwania">Kwania</option>
+                    <option value="Aber">Aber</option>
+                    <option value="Oyam">Oyam</option>
+                    <option value="Kole">Kole</option>
+                    <option value="Dokolo">Dokolo</option>
+                    <option value="Amolatar">Amolatar</option>
+                    <option value="Awei">Awei</option>
+                    <option value="Odina">Odina</option>
+                    <option value="Aswa I">Aswa I</option>
+                    <option value="Aswa II">Aswa II</option>
+                    <option value="Aswa III">Aswa III</option>
+                    <option value="Adjumani">Adjumani</option>
+                    <option value="Yumbe">Yumbe</option>
+                    <option value="Lobule">Lobule</option>
+                    <option value="Giligili">Giligili</option>
+                    <option value="Moyo">Moyo</option>
+                    <option value="Koboko">Koboko</option>
+                    <option value="Ragem">Ragem</option>
+                    <option value="Paidha">Paidha</option>
+                    <option value="Olia">Olia</option>
+                    <option value="Nebbi">Nebbi</option>
+                    <option value="Bidibidi">Bidibidi</option>
+                    <option value="Bubulo">Bubulo</option>
+                    <option value="Kisoko">Kisoko</option>
+                    <option value="Mukuju">Mukuju</option>
+                    <option value="Budaka">Budaka</option>
+                    <option value="Masafu">Masafu</option>
+                    <option value="Ngenge">Ngenge</option>
+                    <option value="Kapchorwa">Kapchorwa</option>
+                    <option value="Mutufu">Mutufu</option>
+                    <option value="Butaleja">Butaleja</option>
+                    <option value="Agule">Agule</option>
+                    <option value="Kakoro">Kakoro</option>
+                    <option value="Kibuku">Kibuku</option>
+                    <option value="Kamuge">Kamuge</option>
+                    <option value="Bukwo">Bukwo</option>
+                    <option value="Amuria">Amuria</option>
+                    <option value="Kaberamaido">Kaberamaido</option>
+                    <option value="Nakatunya">Nakatunya</option>
+                    <option value="Serere">Serere</option>
+                    <option value="Kumi">Kumi</option>
+                    <option value="Katakwi">Katakwi</option>
+                    <option value="Bukedea">Bukedea</option>
+                    <option value="Ngora">Ngora</option>
+                    <option value="Bugiri">Bugiri</option>
+                    <option value="Kamuli">Kamuli</option>
+                    <option value="Kaliro">Kaliro</option>
+                    <option value="Mayuge">Mayuge</option>
+                    <option value="Bufumbira">Bufumbira</option>
+                    <option value="Bugembe">Bugembe</option>
+                    <option value="Buyende">Buyende</option>
+                    <option value="Namalemba">Namalemba</option>
+                    <option value="Namungalwe">Namungalwe</option>
+                    <option value="Nawanyago">Nawanyago</option>
+                    <option value="Kiyunga">Kiyunga</option>
+                    <option value="Buyinja">Buyinja</option>
+                    <option value="Ivukula">Ivukula</option>
+                    <option value="Kagoma">Kagoma</option>
+                    <option value="Kaiti">Kaiti</option>
+                    <option value="Nabwigulu">Nabwigulu</option>
+                    <option value="Butagaya">Butagaya</option>
+                    <option value="Iganga">Iganga</option>
+                    <option value="Busesa">Busesa</option>
+                    <option value="Imanyiro">Imanyiro</option>
+                    <option value="Kidera">Kidera</option>
+                    <option value="Busedde">Busedde</option>
+                    <option value="Kigandalo">Kigandalo</option>
+                    <option value="Kityerera">Kityerera</option>
+                    <option value="Ikulwe">Ikulwe</option>
+                    <option value="Bubukwanga">Bubukwanga</option>
+                    <option value="Kibiito">Kibiito</option>
+                    <option value="Nyabirongo">Nyabirongo</option>
+                    <option value="Rokooki">Rokooki</option>
+                    <option value="Bwera">Bwera</option>
+                    <option value="Maliba">Maliba</option>
+                    <option value="Kyenjojo">Kyenjojo</option>
+                    <option value="Lake Katwe">Lake Katwe</option>
+                    <option value="Muhokya">Muhokya</option>
+                    <option value="Butiti">Butiti</option>
+                    <option value="Kyegegwa">Kyegegwa</option>
+                    <option value="Butuntumula">Butuntumula</option>
+                    <option value="Muduuma">Muduuma</option>
+                    <option value="Nyimbwa">Nyimbwa</option>
+                    <option value="Bamunanika">Bamunanika</option>
+                    <option value="Kasangati">Kasangati</option>
+                    <option value="Wabusaana">Wabusaana</option>
+                    <option value="Sentema">Sentema</option>
+                    <option value="Mukulubita">Mukulubita</option>
+                    <option value="Buwambo">Buwambo</option>
+                    <option value="Kapeeka">Kapeeka</option>
+                    <option value="Kitala">Kitala</option>
+                    <option value="Wakyato">Wakyato</option>
+                    <option value="Kasanje">Kasanje</option>
+                    <option value="Butoolo">Butoolo</option>
+                    <option value="Buwama">Buwama</option>
+                    <option value="Nkozi">Nkozi</option>
+                    <option value="Kabasanda">Kabasanda</option>
+                    <option value="Ngoma">Ngoma</option>
+                    <option value="Bulaula">Bulaula</option>
+                    <option value="Busaana">Busaana</option>
+                    <option value="Galilaya">Galilaya</option>
+                    <option value="Kayonza">Kayonza</option>
+                    <option value="Ntenjeru">Ntenjeru</option>
+                    <option value="Kangulumira">Kangulumira</option>
+                    <option value="Nagojje">Nagojje</option>
+                    <option value="Nakiffuma">Nakiffuma</option>
+                    <option value="Nakisunga">Nakisunga</option>
+                    <option value="Ngogwe">Ngogwe</option>
+                    <option value="Bukomero">Bukomero</option>
+                    <option value="Biiso">Biiso</option>
+                    <option value="Bugambe">Bugambe</option>
+                    <option value="Hoima">Hoima</option>
+                    <option value="Maiha">Maiha</option>
+                    <option value="Kiryandongo">Kiryandongo</option>
+                    <option value="Kiboga">Kiboga</option>
+                    <option value="Ntwetwe">Ntwetwe</option>
+                    <option value="Kigumba">Kigumba</option>
+                    <option value="Buliisa">Buliisa</option>
+                    <option value="Ntungamo">Ntungamo</option>
+                    <option value="Mitooma">Mitooma</option>
+                    <option value="Sanga">Sanga</option>
+                    <option value="Isingiro">Isingiro</option>
+                    <option value="Kakiika">Kakiika</option>
+                    <option value="Buhweju">Buhweju</option>
+                    <option value="Kiruhura">Kiruhura</option>
+                    <option value="Kamwenge">Kamwenge</option>
+                    <option value="Kicheche">Kicheche</option>
+                    <option value="Ndorwa">Ndorwa</option>
+                    <option value="Kanungu">Kanungu</option>
+                    <option value="Kisoro">Kisoro</option>
+                    <option value="Rubanda">Rubanda</option>
+                    <option value="Mparo">Mparo</option>
+                    <option value="Rukungiri">Rukungiri</option>
+                    <option value="Kihihi">Kihihi</option>
+                    <option value="Nyarushanje">Nyarushanje</option>
+                    <option value="Ssaza">Ssaza</option>
+                    <option value="Bigasa">Bigasa</option>
+                    <option value="Ndagwe">Ndagwe</option>
+                    <option value="Kisekka">Kisekka</option>
+                    <option value="Kitanda">Kitanda</option>
+                    <option value="Lwabenge">Lwabenge</option>
+                    <option value="Kyamulibwa">Kyamulibwa</option>
+                    <option value="Kyanamukaka">Kyanamukaka</option>
+                    <option value="Mukungwe">Mukungwe</option>
+                    <option value="Lukaaya">Lukaaya</option>
+                    <option value="Lwamagwa">Lwamagwa</option>
+                    <option value="Rakai">Rakai</option>
+                    <option value="Sembabule">Sembabule</option>
+                    <option value="Lwebitakuli">Lwebitakuli</option>
+                    <option value="Ntuusi">Ntuusi</option>
+                    <option value="Mateete">Mateete</option>
+                    <option value="Lwemiyaga">Lwemiyaga</option>
+                    <option value="Kyazanga">Kyazanga</option>
+                    <option value="Lwengo">Lwengo</option>
+                    <option value="Bukulula">Bukulula</option>
+                    <option value="Buwunga">Buwunga</option>
+                    <option value="Kabonera">Kabonera</option>
+                    <option value="Kalungu">Kalungu</option>
+                    <option value="Kasaali">Kasaali</option>
+                    <option value="Kayanja">Kayanja</option>
+                    <option value="Kabula">Kabula</option>
+                    <option value="Kabira">Kabira</option>
+                    <option value="Kacheera">Kacheera</option>
+                    <option value="Kakuuto">Kakuuto</option>
+                    <option value="Kalisizo">Kalisizo</option>
+                    <option value="Kalangala">Kalangala</option>
+                    <option value="Butenga">Butenga</option>
+                    <option value="Moroto">Moroto</option>
+                    <option value="Namalu">Namalu</option>
+                    <option value="Amita">Amita</option>
+                    <option value="Kotido">Kotido</option>
+                    <option value="Kaabong">Kaabong</option>
+                    <option value="Nakapiripirit">Nakapiripirit</option>
+                </optgroup>
+                <optgroup label="DISTPRI">
+                    <option value="Masaka">Masaka</option>
+                    <option value="Mbarara">Mbarara</option>
+                    <option value="Arua">Arua</option>
+                    <option value="Bushe Zone">Bushe Zone</option>
+                    <option value="Kalungu">Kalungu</option>
+                    <option value="DPC Luweero">DPC Luweero</option>
+                    <option value="DPC Wakiso">DPC Wakiso</option>
+                    <option value="DPC Mpigi">DPC Mpigi</option>
+                    <option value="DPC Iganga">DPC Iganga</option>
+                    <option value="DPC Soroti">DPC Soroti</option>
+                    <option value="DPC Tororo">DPC Tororo</option>
+                    <option value="DPC Bugiri">DPC Bugiri</option>
+                    <option value="DPC Kamuli">DPC Kamuli</option>
+                    <option value="DPC Kaliro">DPC Kaliro</option>
+                    <option value="DPC Mayuge">DPC Mayuge</option>
+                    <option value="DPC Kasese">DPC Kasese</option>
+                    <option value="DPC Rakai">DPC Rakai</option>
+                    <option value="DPC Kalangala">DPC Kalangala</option>
+                    <option value="DPC Lwengo">DPC Lwengo</option>
+                    <option value="DPC Masindi">DPC Masindi</option>
+                    <option value="DPC Kabale">DPC Kabale</option>
+                    <option value="DPC Lira">DPC Lira</option>
+                    <option value="DPC Alebtong">DPC Alebtong</option>
+                    <option value="DPC Apac">DPC Apac</option>
+                </optgroup>
+                <optgroup label="FARMS">
+                    <option value="Kitalya Farm">Kitalya Farm</option>
+                    <option value="Kakumiro Farm">Kakumiro Farm</option>
+                    <option value="Kijjumba Farm">Kijjumba Farm</option>
+                    <option value="Kaweeri Farm">Kaweeri Farm</option>
+                    <option value="Loro Farm">Loro Farm</option>
+                    <option value="Arocha Farm">Arocha Farm</option>
+                    <option value="Erute Farm">Erute Farm</option>
+                    <option value="Alebtong Farm">Alebtong Farm</option>
+                    <option value="Tororo Farm">Tororo Farm</option>
+                    <option value="Ruimi Farm">Ruimi Farm</option>
+                    <option value="Ibuga Farm">Ibuga Farm</option>
+                    <option value="Mubuku Farm">Mubuku Farm</option>
+                    <option value="Isimba Farm">Isimba Farm</option>
+                    <option value="Kakiika Farm">Kakiika Farm</option>
+                    <option value="Kiburara Farm">Kiburara Farm</option>
+                    <option value="Nyabuhikye">Nyabuhikye</option>
+                    <option value="Mtutkula Farm">Mtutkula Farm</option>
+                </optgroup>
+                <optgroup label="SPECIAL">
+                    <option value="Kampala Remand Prison">Kampala Remand Prison</option>
+                    <option value="Prisons Academy Training School and Staff College">Prisons Academy Training School and Staff College</option>
+                    <option value="Barracks and Security Luzira">Barracks and Security Luzira</option>
+                    <option value="Uganda Prisons Band">Uganda Prisons Band</option>
+                    <option value="Prisons Headquarters">Prisons Headquarters</option>
+                    <option value="Kitalya Min-Max">Kitalya Min-Max</option>
+                    <option value="Bugungu Y.P">Bugungu Y.P</option>
+                    <option value="Bugungu Y.O">Bugungu Y.O</option>
+                </optgroup>
+                <optgroup label="REGPRI">
+                    <option value="NORTHERN">NORTHERN</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="NORTH-EASTERN">NORTH-EASTERN</option>
+                    <option value="WEST">WEST</option>
+                    <option value="MID-WESTERN">MID-WESTERN</option>
+                    <option value="SOUTH-WESTERN">SOUTH-WESTERN</option>
+                    <option value="SOUTHERN">SOUTHERN</option>
+                    <option value="CENTRAL">CENTRAL</option>
+                    <option value="KER">KER</option>
+                    <option value="EASTERN">EASTERN</option>
+                    <option value="EAST CENTRAL">EAST CENTRAL</option>
+                    <option value="MID CENTRAL">MID CENTRAL</option>
+                    <option value="NORTH CENTRAL">NORTH CENTRAL</option>
+                    <option value="MID NORTHERN">MID NORTHERN</option>
+                    <option value="NORTH WESTERN">NORTH WESTERN</option>
+                    <option value="MID EASTERN">MID EASTERN</option>
+                    <option value="SOUTH EASTERN">SOUTH EASTERN</option>
+                    <option value="KIGEZI">KIGEZI</option>
+                    <option value="KOOKI">KOOKI</option>
+                    <option value="IGANGA">IGANGA</option>
+                </optgroup>
+            </select>
+            
+            <label for="data">Return Data:</label>
+            <div id="dataInputContainer">
+                <textarea id="data" rows="8" placeholder="Enter return data here or upload a file..."></textarea>
+                <div style="margin-top: 10px;">
+                    <input type="file" id="fileUpload" accept="*/*" style="margin-right: 10px;">
+                    <button type="button" id="uploadBtn">Upload File</button>
+                </div>
+            </div>
+
+            <label for="comment">Comment (Optional):</label>
+            <textarea id="comment" rows="3" placeholder="Add any comments here..."></textarea>
+            
+            <button type="submit">Submit Return</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Developed by OboteSofTech | Version 1.2.0</p>
+    </footer>
+
+    <button id="backToDashboard" class="back-btn">Back to Dashboard</button>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <span>Station Chat</span>
+            <button id="chatToggle" class="chat-toggle">−</button>
+        </div>
+        <div id="chatContent" class="chat-content">
+            <div id="chatSignIn" class="chat-signin">
+                <h4>Sign in to Chat</h4>
+                <input type="text" id="chatIdentifier" placeholder="10-digit phone or email" required>
+                <button id="chatSignInBtn">Sign In</button>
+            </div>
+            <div id="chatInterface" class="chat-interface" style="display: none;">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chatMessage" placeholder="Type your message..." maxlength="200">
+                    <button id="chatSendBtn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

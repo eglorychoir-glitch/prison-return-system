@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Return Management System - View Returns</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="view-returns-page">
+    <header class="floating-header">
+        <div class="header-content">
+            <span>UGANDA PRISONS SERVICE</span>
+            <div class="header-controls">
+                <select id="sortReturns">
+                    <option value="">Sort by...</option>
+                    <option value="submittedBy">Name</option>
+                    <option value="returnType">Type</option>
+                    <option value="frequency">Frequency</option>
+                    <option value="station">Station</option>
+                    <option value="submittedAt">Date & Time</option>
+                </select>
+                <input type="text" id="searchReturns" placeholder="Search returns by name, type, frequency, or station">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>View Returns</h1>
+        <div class="view-controls">
+            <button id="exportCsvBtn" class="export-btn">Export to CSV</button>
+        </div>
+        <div id="returnsList">
+            <!-- Returns will be listed here -->
+        </div>
+    </div>
+
+    <footer class="floating-footer">
+        <p>&copy; 2025 Developed by OboteSofTech | Version 1.2.0</p>
+    </footer>
+
+    <button id="backToDashboard" class="back-btn">Back to Dashboard</button>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <span>Station Chat</span>
+            <button id="chatToggle" class="chat-toggle">−</button>
+        </div>
+        <div id="chatContent" class="chat-content">
+            <div id="chatSignIn" class="chat-signin">
+                <h4>Sign in to Chat</h4>
+                <input type="text" id="chatIdentifier" placeholder="10-digit phone or email" required>
+                <button id="chatSignInBtn">Sign In</button>
+            </div>
+            <div id="chatInterface" class="chat-interface" style="display: none;">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chatMessage" placeholder="Type your message..." maxlength="200">
+                    <button id="chatSendBtn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

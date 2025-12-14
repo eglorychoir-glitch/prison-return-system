@@ -1,0 +1,56 @@
+{
+  "name": "prison-return-management-system",
+  "version": "1.2.0",
+  "description": "Prison Return Management System for Uganda Prisons Service",
+  "main": "main.js",
+  "author": "OboteSofTech",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "server": "node server.js",
+    "build": "electron-builder",
+    "dist": "electron-builder --publish=never"
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.obotesoftech.prisonreturns",
+    "productName": "Prison Return Management System",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**/*",
+      "!build/**/*",
+      "!*.md",
+      "!TODO.md"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "images 2.png",
+      "sign": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PRMS",
+      "runAfterFinish": true
+    }
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

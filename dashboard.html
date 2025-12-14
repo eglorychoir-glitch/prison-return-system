@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prison Return Management System - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <header class="floating-header">
+        <div class="header-content">
+            <span>UGANDA PRISONS SERVICE</span>
+            <div class="header-controls" id="headerControls">
+                <!-- User Management button will be added here for authorized users -->
+            </div>
+        </div>
+    </header>
+    <div class="container dashboard-container">
+        <h1>Dashboard</h1>
+        <p>Welcome, <span id="userRole"></span>!</p>
+        <div id="dashboardContent">
+            <!-- Content will be populated by JavaScript based on role -->
+        </div>
+
+        <!-- User Management Link for Admin and PHQ-KLA -->
+        <div id="userManagementLink" style="display: none; margin-top: 20px;">
+            <button id="manageUsersBtn" style="background: #28a745; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px;">Manage User Accounts</button>
+        </div>
+        <button id="backToDashboard" style="display: none;">Back to Dashboard</button>
+        <button id="logoutBtn">Logout</button>
+    </div>
+    <footer>
+        <p>&copy; 2025 Developed by OboteSofTech | Version 1.2.0</p>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <span>Station Chat</span>
+            <button id="chatToggle" class="chat-toggle">−</button>
+        </div>
+        <div id="chatContent" class="chat-content">
+            <div id="chatSignIn" class="chat-signin">
+                <h4>Sign in to Chat</h4>
+                <input type="text" id="chatIdentifier" placeholder="10-digit phone or email" required>
+                <button id="chatSignInBtn">Sign In</button>
+            </div>
+            <div id="chatInterface" class="chat-interface" style="display: none;">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chatMessage" placeholder="Type your message..." maxlength="200">
+                    <button id="chatSendBtn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
